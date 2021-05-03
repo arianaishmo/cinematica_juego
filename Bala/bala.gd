@@ -1,5 +1,5 @@
 extends KinematicBody2D
-
+#Cmabio
 
 var velocidad = 0
 var pos = Vector2()
