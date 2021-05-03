@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Bala_body.tscn" type="PackedScene" id=1]
+
+[node name="Player" type="Node2D"]
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 82.8633, 74.3188 )
+rotation = -0.0193792

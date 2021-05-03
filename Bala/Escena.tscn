@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://a7ddc72d16b69efbdf901550172567a5-icono-de-botella-de-agua-by-vexels.png" type="Texture" id=2]
+[ext_resource path="res://Escena.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14.0925, 40.1075 )
+
+[node name="Escena" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2.82843, 2.82845 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 859.842, 101.823 )
+mode = 1
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+position = Vector2( 2.82825, -7.07104 )
+scale = Vector2( 0.193456, 0.154786 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 1 )
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2( 873.984, 455.377 )
+mode = 1
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D2"]
+position = Vector2( 0, -4.24255 )
+scale = Vector2( 0.193456, 0.154786 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2( -110.034, -182.746 )
+shape = SubResource( 1 )
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2( 766.504, 271.529 )
+mode = 1
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D3"]
+position = Vector2( 0, -4.24255 )
+scale = Vector2( 0.193456, 0.154786 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="RigidBody2D3"]
+position = Vector2( 105.324, 177.902 )
+shape = SubResource( 1 )
+
+[node name="lbl_vel" type="Label" parent="."]
+margin_left = 581.803
+margin_top = 10.5017
+margin_right = 736.803
+margin_bottom = 42.5017
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_pos" type="Label" parent="."]
+margin_left = 556.863
+margin_top = 51.7726
+margin_right = 734.863
+margin_bottom = 77.7726
+__meta__ = {
+"_edit_use_anchors_": false
+}
