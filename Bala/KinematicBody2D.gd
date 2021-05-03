@@ -1,12 +1,13 @@
 extends KinematicBody2D
 
+# Velocidad a la que se moverá nuestro jugador
 var speed = 250
 var velocity = Vector2()
 
-
-
+#	Captura de entradas de teclas para mover nuestro jugador
+#	y disparar
 func get_input():
-	# Detect up/down/left/right keystate and only move when pressed.
+	
 	velocity = Vector2()
 	if Input.is_action_pressed('ui_down'):
 		velocity.y += 1
@@ -17,12 +18,14 @@ func get_input():
 		shoot()
 	velocity = velocity.normalized() * speed
 
-
+# Función que se activa durante el juego para usar las 
+#	físicas definidas
 func _physics_process(delta):
 	get_input()
 	move_and_collide(velocity * delta)
 			
-			
+		
+#	Función que crea nodos hijos instanciando las balas.
 func shoot():
 	var proyectil = load("res://Proyectil.tscn")
 	var bullet = proyectil.instance()

@@ -2,7 +2,8 @@ extends Node2D
 
 var pos = Vector2()
 
-
+#	Función que permite controlar la posición de los
+# 	blancos.
 func _input(event):
 	if event is InputEventKey and event.pressed:
 		if event.scancode == KEY_F:
@@ -19,6 +20,7 @@ func _input(event):
 	
 func _ready():
 	pass		
+#Imprime la velocidad inicial y la distancia de los blancos.
 func _process(delta):
 	$lbl_vel.text = "Velocidad inicial: " + str(Globales.velocidad)
 	$lbl_pos.text = "Objetivo más cercano: " + str($RigidBody2D2.position.x)
