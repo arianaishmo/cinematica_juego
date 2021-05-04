@@ -4,10 +4,8 @@ extends KinematicBody2D
 #	de la bala
 var velocidad = 0
 var pos = Vector2()
-var ac = 0
 var ang = 0
 var g = 9.81
-var vy = sin(ang * (PI /180))
 var t = 0
 
 #	Del script globales.gd, toma la variable de velocidad, la cual se actualiza
